@@ -446,9 +446,233 @@
         }
 
         /* Footer */
-        .footer {
+      .footer {
+            padding: 70px 0 30px;
+            background: linear-gradient(to bottom, rgba(10, 10, 15, 0.8), rgba(10, 10, 15, 1));
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--accent-purple-transparent);
+            filter: blur(60px);
+            top: -100px;
+            left: -100px;
+            z-index: 1;
+        }
+
+        .footer::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--accent-blue-transparent);
+            filter: blur(60px);
+            bottom: -80px;
+            right: -80px;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            /* Brand | Team | Contact */
+            gap: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+        }
+
+        .footer-tagline {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 163, 255, 0.2);
+        }
+
+        .footer-heading {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .team-section {
+            display: flex;
+            gap: 24px;
+            flex-wrap: nowrap;
+            /* ❗ bina kate side-by-side */
+        }
+
+
+        .team-member {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .member-role {
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .member-contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .member-contact i {
+            color: var(--accent-blue);
+            width: 20px;
+        }
+
+        .member-contact a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .member-contact a:hover {
+            color: var(--accent-orange);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .contact-info li i {
+            margin-right: 12px;
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            width: 25px;
+        }
+
+        .contact-info li a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info li a:hover {
+            color: var(--accent-orange);
+        }
+
+        .footer-bottom {
             text-align: center;
-            padding: 40px 0;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: var(--text-secondary);
             font-size: 0.9rem;
@@ -456,6 +680,27 @@
             z-index: 2;
         }
 
+        .copyright {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-orange);
+        }
         /* 3D Hover Effects */
         .portfolio-card:hover,
         .package-card:hover {
@@ -582,10 +827,118 @@
     </section>
 
     <!-- Footer -->
+       <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2023 OyeCreatives. All rights reserved.</p>
-            <p>Premium Creative Agency with Futuristic Design Solutions</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+
+                    <div class="logo-box">
+                        <img src="logo.png" alt="OyeCreatives Logo" class="logo-img">
+                        <h1 class="logo-text">OyeCreatives</h1>
+                    </div>
+
+                    <p class="footer-tagline">We create stunning digital experiences that transform brands and captivate
+                        audiences. Our futuristic approach to design and marketing delivers exceptional results for
+                        businesses of all sizes.</p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-team">
+                    <h3 class="footer-heading">Creative Directors</h3>
+                    <div class="team-section">
+                        <div class="team-member">
+                            <h4 class="member-name">Ankit Banna</h4>
+                            <div class="member-role">Creative Director & Founder</div>
+                            <div class="member-contact">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919302118450">+91 93021 18450</a>
+                            </div>
+                            <div class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ankit@oyecreatives.com">ankit@oyecreatives.com</a>
+                            </div>
+                            <div class="member-contact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bangalore, India</span>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <h4 class="member-name">Gopal Darbar</h4>
+                            <div class="member-role">Technical Director & Co-Founder</div>
+                            <div class="member-contact">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+918959097675">+91 89590 97675</a>
+                            </div>
+                            <div class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:gopal@oyecreatives.com">gopal@oyecreatives.com</a>
+                            </div>
+                            <div class="member-contact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Indore, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <a href="tel:+911800123456">+91 89590 97675</a>
+                                <div style="font-size: 0.85rem; color: var(--text-secondary);">Toll Free Number</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:info@oyecreatives.com">info@oyecreatives.com</a>
+                                <div style="font-size: 0.85rem; color: var(--text-secondary);">General Inquiries</a>
+                                </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                                <div style="font-size: 0.85rem; color: var(--text-secondary);">Working Hours</div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>OyeCreatives Studio</span>
+                                <div style="font-size: 0.85rem; color: var(--text-secondary);">132 vishal nagar,
+                                    Indore,
+                                    India - 452012</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 OyeCreatives. All rights reserved.</p>
+                <p>Premium Creative Agency with Futuristic Design Solutions</p>
+
+                <div class="footer-links">
+                    <a href="#portfolio">Our Services</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Careers</a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -1057,3 +1410,4 @@
 </body>
 
 </html>
+
