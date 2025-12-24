@@ -480,24 +480,12 @@
             z-index: 1;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
-            position: relative;
-            z-index: 2;
-        }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            /* Brand | Team | Contact */
-            gap: 50px;
-            margin-bottom: 50px;
-            position: relative;
-            z-index: 2;
-        }
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 50px;
+}
 
 
         .footer-logo {
@@ -567,7 +555,7 @@
         .team-section {
             display: flex;
             gap: 24px;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             /* ❗ bina kate side-by-side */
         }
 
@@ -581,8 +569,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
-            flex: 1;
-            min-width: 280px;
+            flex: 1 1 260px;
+            min-width: 260px;
         }
 
         .team-member:hover {
@@ -714,6 +702,7 @@
         @media (max-width: 1024px) {
             .footer-content {
                 grid-template-columns: 1fr;
+                 gap: 40px;
             }
 
             .team-section {
@@ -730,6 +719,35 @@
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+    .logo-box {
+        flex-direction: column;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card,
+    .package-card {
+        transform: none !important;
+    }
+}
 
         /* Responsive Styles */
         @media (max-width: 1100px) {
@@ -737,6 +755,19 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+@media (max-width: 576px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        padding: 50px 0 25px;
+    }
+}
 
         @media (max-width: 768px) {
             .portfolio-grid {
@@ -1430,5 +1461,6 @@
 </body>
 
 </html>
+
 
 
