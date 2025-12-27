@@ -997,7 +997,7 @@
         </div>
     </footer>
 
-    <script>
+     <script>
         // Portfolio data
         const portfolioServices = [
             {
@@ -1062,7 +1062,7 @@
             }
         ];
 
-        // Updated Package data with new pricing structure
+        // Complete Package data for ALL services
         const packageData = {
             'graphic-design': [
                 {
@@ -1215,6 +1215,342 @@
                     revisions: 'Unlimited',
                     offer: true
                 }
+            ],
+            'photography': [
+                {
+                    name: 'Basic',
+                    price: '₹8,999',
+                    originalPrice: '₹12,999',
+                    features: [
+                        { text: '2 Hours Photo Session', included: true },
+                        { text: '50 Edited Photos', included: true },
+                        { text: 'Basic Retouching', included: true },
+                        { text: 'Digital Delivery', included: true },
+                    ],
+                    delivery: '7 Days',
+                    revisions: '2 Revisions',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹14,999',
+                    originalPrice: '₹19,999',
+                    features: [
+                        { text: '4 Hours Photo Session', included: true },
+                        { text: '100 Edited Photos', included: true },
+                        { text: 'Advanced Retouching', included: true },
+                        { text: 'Print-Ready Files', included: true },
+                        { text: 'Online Gallery', included: true }
+                    ],
+                    delivery: '10 Days',
+                    revisions: '3 Revisions',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹24,999',
+                    originalPrice: '₹32,999',
+                    features: [
+                        { text: 'Full Day Session', included: true },
+                        { text: '200+ Edited Photos', included: true },
+                        { text: 'Premium Retouching', included: true },
+                        { text: 'Photo Album Design', included: true },
+                        { text: 'Social Media Teasers', included: true },
+                        { text: 'Unlimited Revisions', included: true }
+                    ],
+                    delivery: '14 Days',
+                    revisions: 'Unlimited',
+                    offer: true
+                }
+            ],
+            'video-editing': [
+                {
+                    name: 'Basic',
+                    price: '₹4,999',
+                    originalPrice: '₹7,999',
+                    features: [
+                        { text: '3 Reels (30 sec each)', included: true },
+                        { text: 'Basic Transitions', included: true },
+                        { text: 'Stock Music', included: true },
+                        { text: 'Text Overlays', included: true },
+                    ],
+                    delivery: '3 Days',
+                    revisions: '2 Revisions',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹9,999',
+                    originalPrice: '₹14,999',
+                    features: [
+                        { text: '5 Reels (60 sec each)', included: true },
+                        { text: 'Advanced Transitions', included: true },
+                        { text: 'Custom Music', included: true },
+                        { text: 'Color Grading', included: true },
+                        { text: 'Motion Graphics', included: true }
+                    ],
+                    delivery: '5 Days',
+                    revisions: '3 Revisions',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹16,999',
+                    originalPrice: '₹24,999',
+                    features: [
+                        { text: '10 Reels + 1 Video (2 min)', included: true },
+                        { text: 'Professional Color Grading', included: true },
+                        { text: 'Original Score', included: true },
+                        { text: '3D Effects', included: true },
+                        { text: 'Voice Over Recording', included: true },
+                        { text: 'Unlimited Revisions', included: true }
+                    ],
+                    delivery: '7 Days',
+                    revisions: 'Unlimited',
+                    offer: true
+                }
+            ],
+            'event-management': [
+                {
+                    name: 'Basic',
+                    price: '₹24,999',
+                    originalPrice: '₹34,999',
+                    features: [
+                        { text: 'Event Planning', included: true },
+                        { text: 'Venue Selection', included: true },
+                        { text: 'Basic Decor', included: true },
+                        { text: 'Vendor Coordination', included: true },
+                    ],
+                    delivery: 'Event Day',
+                    revisions: 'Planning Phase Only',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹49,999',
+                    originalPrice: '₹69,999',
+                    features: [
+                        { text: 'Complete Event Management', included: true },
+                        { text: 'Premium Decor', included: true },
+                        { text: 'Entertainment Arrangement', included: true },
+                        { text: 'Catering Management', included: true },
+                        { text: 'Photography & Videography', included: true }
+                    ],
+                    delivery: 'Event Day',
+                    revisions: 'Full Planning',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹89,999',
+                    originalPrice: '₹1,19,999',
+                    features: [
+                        { text: 'Luxury Event Planning', included: true },
+                        { text: 'Celebrity Management', included: true },
+                        { text: 'Custom Theme Design', included: true },
+                        { text: 'Live Streaming Setup', included: true },
+                        { text: 'Post-Event Analytics', included: true },
+                        { text: '24/7 Dedicated Manager', included: true }
+                    ],
+                    delivery: 'Event Day',
+                    revisions: 'Unlimited Planning',
+                    offer: true
+                }
+            ],
+            'social-media': [
+                {
+                    name: 'Basic',
+                    price: '₹6,999',
+                    originalPrice: '₹9,999',
+                    features: [
+                        { text: '2 Platforms Management', included: true },
+                        { text: '15 Posts per month', included: true },
+                        { text: 'Basic Content Creation', included: true },
+                        { text: 'Weekly Analytics Report', included: true },
+                    ],
+                    delivery: 'Monthly',
+                    revisions: '2 per post',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹12,999',
+                    originalPrice: '₹17,999',
+                    features: [
+                        { text: '4 Platforms Management', included: true },
+                        { text: '30 Posts per month', included: true },
+                        { text: 'Advanced Content Creation', included: true },
+                        { text: 'Community Engagement', included: true },
+                        { text: 'Daily Monitoring', included: true }
+                    ],
+                    delivery: 'Monthly',
+                    revisions: '3 per post',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹21,999',
+                    originalPrice: '₹29,999',
+                    features: [
+                        { text: 'All Platform Management', included: true },
+                        { text: '60+ Posts per month', included: true },
+                        { text: 'Strategic Campaigns', included: true },
+                        { text: 'Influencer Collaboration', included: true },
+                        { text: 'Real-time Analytics', included: true },
+                        { text: 'Crisis Management', included: true }
+                    ],
+                    delivery: 'Monthly',
+                    revisions: 'Unlimited',
+                    offer: true
+                }
+            ],
+            'website-design': [
+                {
+                    name: 'Basic',
+                    price: '₹14,999',
+                    originalPrice: '₹19,999',
+                    features: [
+                        { text: '5 Page Website', included: true },
+                        { text: 'Responsive Design', included: true },
+                        { text: 'Basic SEO Setup', included: true },
+                        { text: 'Contact Form', included: true },
+                    ],
+                    delivery: '15 Days',
+                    revisions: '3 Revisions',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹24,999',
+                    originalPrice: '₹34,999',
+                    features: [
+                        { text: '10 Page Website', included: true },
+                        { text: 'CMS Integration', included: true },
+                        { text: 'Advanced SEO', included: true },
+                        { text: 'E-commerce Setup', included: true },
+                        { text: '6 Months Hosting', included: true }
+                    ],
+                    delivery: '25 Days',
+                    revisions: '5 Revisions',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹44,999',
+                    originalPrice: '₹59,999',
+                    features: [
+                        { text: 'Custom Web Application', included: true },
+                        { text: 'Custom CMS Development', included: true },
+                        { text: 'Premium SEO Package', included: true },
+                        { text: 'Mobile App Integration', included: true },
+                        { text: '1 Year Hosting & Maintenance', included: true },
+                        { text: 'Unlimited Revisions', included: true }
+                    ],
+                    delivery: '45 Days',
+                    revisions: 'Unlimited',
+                    offer: true
+                }
+            ],
+            'ads': [
+                {
+                    name: 'Basic',
+                    price: '₹8,999',
+                    originalPrice: '₹12,999',
+                    features: [
+                        { text: '1 Platform Ads Setup', included: true },
+                        { text: 'Basic Campaign Strategy', included: true },
+                        { text: 'Ad Creative Design', included: true },
+                        { text: 'Weekly Performance Report', included: true },
+                    ],
+                    delivery: '7 Days Setup',
+                    revisions: 'Campaign Optimization',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹16,999',
+                    originalPrice: '₹22,999',
+                    features: [
+                        { text: 'Meta & Google Ads', included: true },
+                        { text: 'Advanced Targeting', included: true },
+                        { text: 'A/B Testing', included: true },
+                        { text: 'Conversion Tracking', included: true },
+                        { text: 'Daily Optimization', included: true }
+                    ],
+                    delivery: '10 Days Setup',
+                    revisions: 'Continuous Optimization',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹29,999',
+                    originalPrice: '₹39,999',
+                    features: [
+                        { text: 'Multi-Platform Campaign', included: true },
+                        { text: 'AI-Powered Optimization', included: true },
+                        { text: 'Retargeting Strategy', included: true },
+                        { text: 'Competitor Analysis', included: true },
+                        { text: 'Real-time Dashboard', included: true },
+                        { text: 'Dedicated Account Manager', included: true }
+                    ],
+                    delivery: '14 Days Setup',
+                    revisions: 'Unlimited Optimization',
+                    offer: true
+                }
+            ],
+            'animation': [
+                {
+                    name: 'Basic',
+                    price: '₹19,999',
+                    originalPrice: '₹27,999',
+                    features: [
+                        { text: '30 Second 3D Animation', included: true },
+                        { text: 'Basic Modeling', included: true },
+                        { text: 'Standard Texturing', included: true },
+                        { text: 'Simple Rigging', included: true },
+                    ],
+                    delivery: '20 Days',
+                    revisions: '3 Revisions',
+                    offer: true
+                },
+                {
+                    name: 'Standard',
+                    price: '₹34,999',
+                    originalPrice: '₹47,999',
+                    features: [
+                        { text: '60 Second 3D Animation', included: true },
+                        { text: 'Advanced Modeling', included: true },
+                        { text: 'Premium Texturing', included: true },
+                        { text: 'Complex Rigging', included: true },
+                        { text: 'Sound Effects', included: true }
+                    ],
+                    delivery: '30 Days',
+                    revisions: '5 Revisions',
+                    popular: true,
+                    offer: true
+                },
+                {
+                    name: 'Premium',
+                    price: '₹59,999',
+                    originalPrice: '₹79,999',
+                    features: [
+                        { text: '2+ Minute 3D Animation', included: true },
+                        { text: 'Photorealistic Rendering', included: true },
+                        { text: 'Character Animation', included: true },
+                        { text: 'Motion Capture Integration', included: true },
+                        { text: 'Original Soundtrack', included: true },
+                        { text: 'Unlimited Revisions', included: true }
+                    ],
+                    delivery: '45 Days',
+                    revisions: 'Unlimited',
+                    offer: true
+                }
             ]
         };
 
@@ -1288,8 +1624,8 @@
             allServicesBtn.setAttribute('data-filter', 'all');
             packageControls.appendChild(allServicesBtn);
 
-            // Add service-specific buttons (first 3 for demo)
-            portfolioServices.slice(0, 3).forEach(service => {
+            // Add service-specific buttons for ALL services
+            portfolioServices.forEach(service => {
                 const filterBtn = document.createElement('button');
                 filterBtn.className = 'service-filter-btn';
                 filterBtn.textContent = service.title;
@@ -1297,8 +1633,9 @@
                 packageControls.appendChild(filterBtn);
             });
 
-            // Generate package sections
-            Object.keys(packageData).forEach(serviceId => {
+            // Generate package sections for ALL services
+            portfolioServices.forEach(service => {
+                const serviceId = service.id;
                 const servicePackages = document.createElement('div');
                 servicePackages.className = 'service-packages';
                 servicePackages.id = `packages-${serviceId}`;
@@ -1307,9 +1644,8 @@
                     servicePackages.classList.add('active');
                 }
 
-                const service = portfolioServices.find(s => s.id === serviceId);
                 servicePackages.innerHTML = `
-                    <h3 style="text-align: center; margin-bottom: 40px; font-size: 1.8rem; color: var(--accent-blue);">${service ? service.title : serviceId} Packages</h3>
+                    <h3 style="text-align: center; margin-bottom: 40px; font-size: 1.8rem; color: var(--accent-blue);">${service.title} Packages</h3>
                     <div class="package-grid" id="package-grid-${serviceId}"></div>
                 `;
 
@@ -1317,103 +1653,53 @@
 
                 // Generate package cards for this service
                 const packageGrid = document.getElementById(`package-grid-${serviceId}`);
-                packageData[serviceId].forEach((pkg, index) => {
-                    const packageCard = document.createElement('div');
-                    let cardClass = 'package-card';
+                if (packageData[serviceId]) {
+                    packageData[serviceId].forEach((pkg, index) => {
+                        const packageCard = document.createElement('div');
+                        let cardClass = 'package-card';
 
-                    if (index === 0) cardClass += ' basic';
-                    else if (index === 1) cardClass += ' standard';
-                    else if (index === 2) cardClass += ' premium';
+                        if (index === 0) cardClass += ' basic';
+                        else if (index === 1) cardClass += ' standard';
+                        else if (index === 2) cardClass += ' premium';
 
-                    packageCard.className = cardClass;
+                        packageCard.className = cardClass;
 
-                    // Generate features list with check and cross marks
-                    const featuresList = pkg.features.map(feature => {
-                        const iconClass = feature.included ? 'fa-check' : 'fa-times';
-                        return `<li><i class="fas ${iconClass}"></i> ${feature.text}</li>`;
-                    }).join('');
+                        // Generate features list with check and cross marks
+                        const featuresList = pkg.features.map(feature => {
+                            const iconClass = feature.included ? 'fa-check' : 'fa-times';
+                            return `<li><i class="fas ${iconClass}"></i> ${feature.text}</li>`;
+                        }).join('');
 
-                    packageCard.innerHTML = `
-                        ${pkg.offer ? '<div class="offer-badge pulse-animation">SPECIAL OFFER</div>' : ''}
-                        ${pkg.popular ? '<div class="popular-badge">Most Popular</div>' : ''}
-                        <h3 class="package-name">${pkg.name}</h3>
-                        <div class="package-price-container">
-                            ${pkg.originalPrice ? `<span class="original-price">${pkg.originalPrice}</span>` : ''}
-                            <span class="package-price">${pkg.price}</span>
-                            ${pkg.offer ? `<span class="offer-text">Limited Time Offer</span>` : ''}
-                        </div>
-                        <ul class="package-features">
-                            ${featuresList}
-                        </ul>
-                        <div class="delivery-info">
-                            <span>Delivery Time</span>
-                            <span class="info-value">${pkg.delivery}</span>
-                        </div>
-                        <div class="revisions-info">
-                            <span>Revisions</span>
-                            <span class="info-value">${pkg.revisions}</span>
-                        </div>
-                        ${pkg.note ? `<div class="package-note">${pkg.note}</div>` : ''}
-                        <a href="#" class="cta-button">Get Started Now</a>
-                    `;
-
-                    packageGrid.appendChild(packageCard);
-
-                    // Add 3D hover effect to package cards
-                    packageCard.addEventListener('mousemove', function (e) {
-                        const card = this;
-                        const cardRect = card.getBoundingClientRect();
-                        const cardCenterX = cardRect.left + cardRect.width / 2;
-                        const cardCenterY = cardRect.top + cardRect.height / 2;
-
-                        const mouseX = e.clientX - cardCenterX;
-                        const mouseY = e.clientY - cardCenterY;
-
-                        const rotateX = (mouseY / cardRect.height) * -8;
-                        const rotateY = (mouseX / cardRect.width) * 8;
-
-                        card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-                        let shadowColor;
-                        if (index === 0) shadowColor = 'rgba(0, 163, 255, 0.3)';
-                        else if (index === 1) shadowColor = 'rgba(255, 107, 53, 0.3)';
-                        else shadowColor = 'rgba(0, 255, 136, 0.3)';
-
-                        card.style.boxShadow = `
-                            0 15px 35px ${shadowColor},
-                            0 0 20px ${shadowColor},
-                            ${mouseX / 20}px ${mouseY / 20}px 30px rgba(0, 0, 0, 0.3)
+                        packageCard.innerHTML = `
+                            ${pkg.offer ? '<div class="offer-badge pulse-animation">SPECIAL OFFER</div>' : ''}
+                            ${pkg.popular ? '<div class="popular-badge">Most Popular</div>' : ''}
+                            <h3 class="package-name">${pkg.name}</h3>
+                            <div class="package-price-container">
+                                ${pkg.originalPrice ? `<span class="original-price">${pkg.originalPrice}</span>` : ''}
+                                <span class="package-price">${pkg.price}</span>
+                                ${pkg.offer ? `<span class="offer-text">Limited Time Offer</span>` : ''}
+                            </div>
+                            <ul class="package-features">
+                                ${featuresList}
+                            </ul>
+                            <div class="delivery-info">
+                                <span>Delivery Time</span>
+                                <span class="info-value">${pkg.delivery}</span>
+                            </div>
+                            <div class="revisions-info">
+                                <span>Revisions</span>
+                                <span class="info-value">${pkg.revisions}</span>
+                            </div>
+                            ${pkg.note ? `<div class="package-note">${pkg.note}</div>` : ''}
+                            <a href="#" class="cta-button" onclick="handlePackageSelection('${service.title}', '${pkg.name}', '${pkg.price}')">Get Started Now</a>
                         `;
-                    });
 
-                    packageCard.addEventListener('mouseleave', function () {
-                        this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+                        packageGrid.appendChild(packageCard);
 
-                        if (index === 0) {
-                            this.style.boxShadow = '0 10px 30px rgba(0, 163, 255, 0.2)';
-                        } else if (index === 1) {
-                            this.style.boxShadow = '0 10px 30px rgba(255, 107, 53, 0.2)';
-                        } else {
-                            this.style.boxShadow = '0 10px 30px rgba(0, 255, 136, 0.2)';
-                        }
+                        // Add 3D hover effect to package cards
+                        add3DHoverEffect(packageCard, index);
                     });
-
-                    // Add button hover effect
-                    const ctaButton = packageCard.querySelector('.cta-button');
-                    ctaButton.addEventListener('mouseenter', function () {
-                        this.style.transform = 'translateY(-3px)';
-                    });
-
-                    ctaButton.addEventListener('mouseleave', function () {
-                        this.style.transform = 'translateY(0)';
-                    });
-
-                    // Add click event to button
-                    ctaButton.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        alert(`Thank you for choosing the ${pkg.name} package for ${service.title}! Our team will contact you shortly.`);
-                    });
-                });
+                }
             });
 
             // Add event listeners to filter buttons
@@ -1459,12 +1745,127 @@
                 if (packagesSection) {
                     packagesSection.style.backgroundPositionY = `${scrolled * 0.03}px`;
                 }
+                
+                // Show/hide scroll to top button
+                const scrollTopBtn = document.getElementById('scrollTop');
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+            
+            // Scroll to top functionality
+            const scrollTopBtn = document.getElementById('scrollTop');
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Make social media links functional
+            const socialLinks = document.querySelectorAll('.social-link');
+            socialLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.querySelector('i').className.split(' ')[1].split('-')[1];
+                    alert(`Redirecting to OyeCreatives ${platform} page (simulated link)`);
+                    // In real implementation, you would use actual URLs:
+                    // window.open('https://facebook.com/oyecreatives', '_blank');
+                });
+            });
+            
+            // Make all footer links functional
+            const footerLinks = document.querySelectorAll('.footer-links a');
+            footerLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if(this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+            
+            // Make team member contact links functional
+            const contactLinks = document.querySelectorAll('.member-contact a');
+            contactLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if(this.getAttribute('href').startsWith('mailto:') || this.getAttribute('href').startsWith('tel:')) {
+                        // Allow default behavior for mailto and tel links
+                        return;
+                    }
+                    e.preventDefault();
+                });
             });
         });
+        
+        // Function to add 3D hover effect to package cards
+        function add3DHoverEffect(card, index) {
+            card.addEventListener('mousemove', function (e) {
+                const cardRect = card.getBoundingClientRect();
+                const cardCenterX = cardRect.left + cardRect.width / 2;
+                const cardCenterY = cardRect.top + cardRect.height / 2;
+
+                const mouseX = e.clientX - cardCenterX;
+                const mouseY = e.clientY - cardCenterY;
+
+                const rotateX = (mouseY / cardRect.height) * -8;
+                const rotateY = (mouseX / cardRect.width) * 8;
+
+                card.style.transform = `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+                let shadowColor;
+                if (index === 0) shadowColor = 'rgba(0, 163, 255, 0.3)';
+                else if (index === 1) shadowColor = 'rgba(255, 107, 53, 0.3)';
+                else shadowColor = 'rgba(0, 255, 136, 0.3)';
+
+                card.style.boxShadow = `
+                    0 15px 35px ${shadowColor},
+                    0 0 20px ${shadowColor},
+                    ${mouseX / 20}px ${mouseY / 20}px 30px rgba(0, 0, 0, 0.3)
+                `;
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+
+                if (index === 0) {
+                    this.style.boxShadow = '0 10px 30px rgba(0, 163, 255, 0.2)';
+                } else if (index === 1) {
+                    this.style.boxShadow = '0 10px 30px rgba(255, 107, 53, 0.2)';
+                } else {
+                    this.style.boxShadow = '0 10px 30px rgba(0, 255, 136, 0.2)';
+                }
+            });
+        }
+        
+        // Function to handle package selection
+        function handlePackageSelection(serviceName, packageName, packagePrice) {
+            alert(`Thank you for selecting the ${packageName} package for ${serviceName} at ${packagePrice}!\n\nOur sales team will contact you within 24 hours to discuss your project requirements.`);
+            
+            // In a real implementation, you would:
+            // 1. Send this data to your backend
+            // 2. Redirect to a contact form
+            // 3. Or open a modal with more details
+        }
+        
+        // Functions for footer links (demo purposes)
+        function showPrivacyPolicy() {
+            alert("Privacy Policy:\n\nAt OyeCreatives, we value your privacy. We collect only necessary information to provide our services and never share your data with third parties without your consent.");
+        }
+        
+        function showTerms() {
+            alert("Terms of Service:\n\nBy using our services, you agree to our terms. All designs and content created remain your property once payment is completed. We retain the right to showcase completed work in our portfolio.");
+        }
+        
+        function showCareers() {
+            alert("Careers at OyeCreatives:\n\nWe're always looking for talented creatives! Send your portfolio to careers@oyecreatives.com\n\nCurrent Openings:\n- Senior Graphic Designer\n- Web Developer\n- Social Media Manager\n- 3D Animator");
+        }
     </script>
 </body>
 
 </html>
+
 
 
 
